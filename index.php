@@ -4,7 +4,7 @@
         <title></title>
     </head>
     <body>
-        <a href="./member/join.php">[Sign in]</a>
+        <a href="./member/join.php">[Sign up]</a>
         <!--no/id/user_id/name/pw/memo/rdgdate/ip -->
         <form action="./test2.php" name="test" method="post">
            <input type='hidden' name="id" value="test">
