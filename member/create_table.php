@@ -1,5 +1,5 @@
 <?header
-    include("../lib/db_connect.php");
+    include("../library/db_connect.php");
     $connect=dbconn();
         //$sql="CREATE TABLE, table name,(field)";
         //mysql_query();
