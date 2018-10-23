@@ -4,6 +4,7 @@
         <title></title>
     </head>
     <body>
+        <a href="./member/join.php">[Sign in]</a>
         <!--no/id/user_id/name/pw/memo/rdgdate/ip -->
         <form action="./test2.php" name="test" method="post">
            <input type='hidden' name="id" value="test">
@@ -15,10 +16,13 @@
            <input type="submit" value="send">
            
            <?
+               /*
                $connect = mysql_connect('localhost','root','');
                mysql_select_db('local',$connect);
-               
                if(!$connect)die("can't connect to mySql".mysql_error());
+               */
+               include("./lib/db_connect.php");
+               $connect=dbconn();
                
                //calling data from query
                $query = "select * from bbs_1 where id='id'";
@@ -26,16 +30,16 @@
                while($data = mysql_fetch_array($result)){
                    
                    $date_Y=substr($data[regdate],0,4);
-                   $date_m=substr($data[regdate,4,2]);
-                   $date_d=substr($data[regdate,6,2]);
+                   $date_m=substr($data[regdate],4,2);
+                   $date_d=substr($data[regdate],6,2);
                    $date_h = substr($data[regdate],8,2);
                    $date_i = substr($data[regdate],10,2);
                    
-                    
-                   -name : <?php echo $data[user_id]; ?>
-                   -id : <? echo $data[id]; ?>
-                   -memo : <? echo $data[memo]; ?>
+                   -name : <?= $data[user_id]; ?>
+                   -id : <?= $data[id]; ?>
+                   -memo : <?= $data[memo]; ?>
                    -date : <?= $data_Y ?>.<?= $data_m ?>.<?= $data_d?>
+                  
                    
                }
             ?>
