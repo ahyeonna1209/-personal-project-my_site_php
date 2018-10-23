@@ -1,6 +1,6 @@
 <?header("content-type:text/html"); 
     
-include '../lib/db_user.php';
+include '../library/db_user.php';
     $connect=dbconn();
     
     $id=$_POST[id];
