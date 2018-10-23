@@ -1,10 +1,8 @@
 <?header
     include("../lib/db_connect.php");
     $connect=dbconn();
-    
         //$sql="CREATE TABLE, table name,(field)";
         //mysql_query();
-        
         $sql="CREATE TALBE member
         (no int not null auto_increment, 
         PRIMARY KEY(no),
