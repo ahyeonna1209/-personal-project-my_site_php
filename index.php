@@ -4,7 +4,19 @@
         <title></title>
     </head>
     <body>
-        <a href="./member/join.php">[Sign up]</a>
+        
+        <? if ($member[user_id]){
+            echo "Welcome, " $member[name];
+        }else{?>
+            <a href="./member/login.php"><strong>[ Sign in ]</strong></a> &nbsp;
+            <a href="./member/login.php"><strong>[ Log in ]</strong></a>
+        <?}?>
+        
+        <? if($member[user_id]){?>
+            <a href="./member/logout.php"><strong>[ Logout ]</strong></a>
+        <?}?>
+        
+        <br/><br/>
         <!--no/id/user_id/name/pw/memo/rdgdate/ip -->
         <form action="./test2.php" name="test" method="post">
            <input type='hidden' name="id" value="test">
@@ -23,6 +35,7 @@
                */
                include("./lib/db_connect.php");
                $connect=dbconn();
+               $member= member();
                
                //calling data from query
                $query = "select * from bbs_1 where id='id'";
