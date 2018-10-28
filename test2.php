@@ -1,3 +1,5 @@
+// Move to board/bbs/list.php
+<!--
 <?header("content-type:text/html; charset=UTF-8");
 
     $id=$_POST[id];
@@ -29,3 +31,5 @@
     window.alert("query has been sent succesfully");
     location.href="./index.php";
 </script>
+
+-->
