@@ -1,6 +1,6 @@
 <html>
     <head>
-       
+        <link type="text/css" href="./lib/m_style.css" rel="stylesheet">
         <title></title>
     </head>
     <body>
@@ -16,8 +16,16 @@
             <a href="./member/logout.php"><strong>[ Logout ]</strong></a>
         <?}?>
         
-        <br/><br/>
+        
+        <br/><br/><br/>
+            <td width="100%" height="500" align="left" valign="top" bgcolor="#452403">
+                <a href ="./board/bbs1/list.php"> [ Board ]</a>   
+            </td>
+        
+        
         <!--no/id/user_id/name/pw/memo/rdgdate/ip -->
+        
+        <!--  
         <form action="./test2.php" name="test" method="post">
            <input type='hidden' name="id" value="test">
            <li>id : <input type="text" name="user_id" size="10">
@@ -27,12 +35,21 @@
            <textarea name="memo"></textarea>
            <input type="submit" value="send">
            
+        -->   
+              
+            
+          
            <?
                /*
+               //double comment section start
                $connect = mysql_connect('localhost','root','');
                mysql_select_db('local',$connect);
                if(!$connect)die("can't connect to mySql".mysql_error());
+               //double comment section end
                */
+               
+               
+               /*  
                include("./lib/db_connect.php");
                $connect=dbconn();
                $member= member();
@@ -55,7 +72,16 @@
                   
                    
                }
+            
+             */  
+               
             ?>
-        </form>
+            
+        
+        
+        <!--</form>-->
+        <br/> <br/>
+        
+        MAIN HOMEPAGE
     </body>
 </html>
