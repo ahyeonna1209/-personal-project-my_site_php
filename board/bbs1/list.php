@@ -6,6 +6,10 @@
     </head>
     
     <body>
-        
+        <table>
+            <td><a href="../../index.php"><strong>Home</strong></a></td>
+            <br/>
+            <td><a href="./write.php"><strong>[Posting on the board]</strong></a></td>
+        </table>
     </body>
 </html>
